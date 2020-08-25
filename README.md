@@ -5,4 +5,4 @@
 ![Schema](screenshot01.jpg)
 
 ### Introductions
-Nowadays, machine learning library s
+Nowadays, machine learning library such as TensorFlow has evolve rapidly so it can enabled of mobile o

@@ -5,4 +5,4 @@
 ![Schema](screenshot01.jpg)
 
 ### Introductions
-Nowadays, machine learning library such as TensorFlow has evolve rapidly so it can enabled of mobile or smartphone doing their own machine learning tasks independentl
+Nowadays, machine learning library such as TensorFlow has evolve rapidly so it can enabled of mobile or smartphone doing their own machine learning tasks independently. However, due to the complexities, not all of (machine learning) models

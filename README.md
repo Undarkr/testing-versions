@@ -11,4 +11,4 @@ Nowadays, machine learning library such as TensorFlow has evolve rapidly so it c
 ![Application schema](screenshot02.jpg)
 
 ### Introductions
-Instead of deploying the mo
+Instead of deploying the model in the client itself, we will create an application (client) that have 

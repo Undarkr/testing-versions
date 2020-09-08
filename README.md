@@ -11,4 +11,7 @@ Nowadays, machine learning library such as TensorFlow has evolve rapidly so it c
 ![Application schema](screenshot02.jpg)
 
 ### Introductions
-Instead of deploying the model in the client itself, we will create an application (client) that have ability to take the picture and send the request to the server and wait for th
+Instead of deploying the model in the client itself, we will create an application (client) that have ability to take the picture and send the request to the server and wait for the result or feedback. 
+
+### Constraints
+- Android application, native, writte

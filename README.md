@@ -14,4 +14,6 @@ Nowadays, machine learning library such as TensorFlow has evolve rapidly so it c
 Instead of deploying the model in the client itself, we will create an application (client) that have ability to take the picture and send the request to the server and wait for the result or feedback. 
 
 ### Constraints
-- Android application, native, writte
+- Android application, native, written in Kotlin.
+- Minimum Android SDK 21 (5.0 a.k.a Jelly Bean)
+- Co

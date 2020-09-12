@@ -18,4 +18,5 @@ Instead of deploying the model in the client itself, we will create an applicati
 - Minimum Android SDK 21 (5.0 a.k.a Jelly Bean)
 - Compiled and target SDK is 29
 - Image captured should be saved in media folder<br>
-  
+    ```
+  /Android/media/domain.applicationdomainname.applicationsubdomainname/ap

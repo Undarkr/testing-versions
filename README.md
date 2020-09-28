@@ -19,4 +19,6 @@ Instead of deploying the model in the client itself, we will create an applicati
 - Compiled and target SDK is 29
 - Image captured should be saved in media folder<br>
     ```
-  /Android/media/domain.applicationdomainname.applicationsubdomainname/ap
+  /Android/media/domain.applicationdomainname.applicationsubdomainname/applicationname/images/
+    ```
+- Image filename should written in forma

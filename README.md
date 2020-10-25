@@ -24,4 +24,6 @@ Instead of deploying the model in the client itself, we will create an applicati
 - Image filename should written in format of `yyyy-mm-dd hh:mm:ss` and saved in format of `*.jpg`
 - Canceled image should be removed from the media folder
 - Allowed dependencies,<br>
-  - And
+  - Android standard dependencies
+  - Android JetPack dependency (CameraX)
+  - Android Ko

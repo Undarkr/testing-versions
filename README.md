@@ -21,4 +21,5 @@ Instead of deploying the model in the client itself, we will create an applicati
     ```
   /Android/media/domain.applicationdomainname.applicationsubdomainname/applicationname/images/
     ```
-- Image filename should written in forma
+- Image filename should written in format of `yyyy-mm-dd hh:mm:ss` and saved in format of `*.jpg`
+- Cancele

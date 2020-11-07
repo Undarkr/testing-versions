@@ -26,4 +26,7 @@ Instead of deploying the model in the client itself, we will create an applicati
 - Allowed dependencies,<br>
   - Android standard dependencies
   - Android JetPack dependency (CameraX)
-  - Android Ko
+  - Android Kotlin Coroutines library
+  - Google Materials
+  - Image: Picasso or Glide
+ 

@@ -29,4 +29,5 @@ Instead of deploying the model in the client itself, we will create an applicati
   - Android Kotlin Coroutines library
   - Google Materials
   - Image: Picasso or Glide
- 
+  - Network: GSon, KTOR, OkHTTP
+  - Asynchronous: ReactiveX (rxJav

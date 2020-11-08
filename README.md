@@ -30,4 +30,5 @@ Instead of deploying the model in the client itself, we will create an applicati
   - Google Materials
   - Image: Picasso or Glide
   - Network: GSon, KTOR, OkHTTP
-  - Asynchronous: ReactiveX (rxJav
+  - Asynchronous: ReactiveX (rxJava, rxKotlin)
+- Please use the latest version for all dependencies that u

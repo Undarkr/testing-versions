@@ -31,4 +31,5 @@ Instead of deploying the model in the client itself, we will create an applicati
   - Image: Picasso or Glide
   - Network: GSon, KTOR, OkHTTP
   - Asynchronous: ReactiveX (rxJava, rxKotlin)
-- Please use the latest version for all dependencies that u
+- Please use the latest version for all dependencies that used in this project
+- Dependencies other than in those list should have discuss

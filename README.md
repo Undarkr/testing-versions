@@ -32,4 +32,8 @@ Instead of deploying the model in the client itself, we will create an applicati
   - Network: GSon, KTOR, OkHTTP
   - Asynchronous: ReactiveX (rxJava, rxKotlin)
 - Please use the latest version for all dependencies that used in this project
-- Dependencies other than in those list should have discuss
+- Dependencies other than in those list should have discussed first
+
+### Updates
+- **2020/06/22 13:10 WIB**<br>
+  - Only used **

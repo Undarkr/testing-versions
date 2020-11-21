@@ -36,4 +36,5 @@ Instead of deploying the model in the client itself, we will create an applicati
 
 ### Updates
 - **2020/06/22 13:10 WIB**<br>
-  - Only used **
+  - Only used **Android JetPack CameraX** dependency for camera library.
+  - If the user exit

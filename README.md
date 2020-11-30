@@ -38,4 +38,6 @@ Instead of deploying the model in the client itself, we will create an applicati
 - **2020/06/22 13:10 WIB**<br>
   - Only used **Android JetPack CameraX** dependency for camera library.
   - If the user exit or destroy the application before the result is retrieved, bring back the Result Activity if user open up the application again and re-fetching the request.
-  - Remove the im
+  - Remove the image file from the media folder if the result has been retrieved.
+
+## Serve

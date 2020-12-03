@@ -43,4 +43,8 @@ Instead of deploying the model in the client itself, we will create an applicati
 ## Server
 CaMLER server can be seen in **CaMLER-Main-API** and **CaMLER-AI-API** repository.
 
-##
+## Contributors
+- **PIC**<br>
+  Nandhika Prayoga
+- **Supervisor**<br>
+  A

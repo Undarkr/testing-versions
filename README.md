@@ -47,4 +47,4 @@ CaMLER server can be seen in **CaMLER-Main-API** and **CaMLER-AI-API** repositor
 - **PIC**<br>
   Nandhika Prayoga
 - **Supervisor**<br>
-  A
+  Arief Purnama Muharram

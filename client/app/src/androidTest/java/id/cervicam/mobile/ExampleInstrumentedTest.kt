@@ -11,4 +11,6 @@ import org.junit.Assert.*
 /**
  * Instrumented test, which will execute on an Android device.
  *
- * See [testing
+ * See [testing documentation](http://d.android.com/tools/testing).
+ */
+@RunWith(AndroidJ

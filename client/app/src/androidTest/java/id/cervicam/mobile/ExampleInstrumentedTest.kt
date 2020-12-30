@@ -1,4 +1,7 @@
 package id.cervicam.mobile
 
 import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.ext
+import androidx.test.ext.junit.runners.AndroidJUnit4
+
+import org.junit.Test
+import org.juni

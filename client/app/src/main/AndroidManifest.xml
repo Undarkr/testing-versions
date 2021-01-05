@@ -15,4 +15,5 @@
 
     <uses-feature
         android:name="android.hardware.camera.flash"
-        android:req
+        android:required="false" />
+    <uses-permission android:name="android.permissio

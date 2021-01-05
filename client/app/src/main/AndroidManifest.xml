@@ -8,4 +8,5 @@
         android:required="true" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.ha
+    <uses-permission android:name="android.hardware.camera2.full" />
+    <uses-permission android:name="android.permis

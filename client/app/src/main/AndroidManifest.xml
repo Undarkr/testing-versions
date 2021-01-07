@@ -20,4 +20,5 @@
 
     <application
         android:icon="@mipmap/ic_launcher"
-        androi
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launch

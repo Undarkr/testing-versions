@@ -28,4 +28,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".activi
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:

@@ -26,4 +26,6 @@
         android:theme="@style/AppTheme"
         android:allowBackup="false"
         android:usesCleartextTraffic="true"
-        
+        tools:targetApi="m">
+        <activity
+            android:name=".activi

@@ -97,3 +97,74 @@ class CameraActivity : AppCompatActivity() {
     /**
      * Check whether all needed permission are granted by client or not
      *
+     */
+    private fun hasCameraPermission(): Boolean {
+        return PERMISSIONS.fold(
+            true,
+            { allPermissions, permission ->
+                allPermissions && this.let {
+                    ActivityCompat.checkSelfPermission(
+                        it, permission
+                    )
+                } == PackageManager.PERMISSION_GRANTED
+            }
+        )
+    }
+
+    /**
+     * Setup camera and integrate it to the surface
+     *
+     */
+    private fun openCamera() {
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+
+        cameraProviderFuture.addListener(Runnable {
+            // Used to bind life-cycle of camera
+            cameraProvider = cameraProviderFuture.get()
+
+            // Set camera preview
+            imagePreview = Preview.Builder().build()
+
+            // Set image capture
+            imageCapture = ImageCapture.Builder().build()
+
+            // Select back camera
+            selectedCamera =
+                CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK).build()
+
+            setCameraCycles()
+        }, ContextCompat.getMainExecutor(this))
+    }
+
+    /**
+     * Send a pick request to gallery app
+     *
+     */
+    private fun openGallery() {
+        Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI).apply {
+            startActivityForResult(this, IMAGE_GALLERY_REQUEST_CODE)
+        }
+    }
+
+    /**
+     * Set all parts of camera in correct order of cycle
+     *
+     */
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setCameraCycles() {
+        if (cameraProvider == null || selectedCamera == null || imagePreview == null || imageCapture == null) return
+
+        try {
+            cameraProvider!!.unbindAll()
+            camera =
+                cameraProvider!!.bindToLifecycle(this, selectedCamera!!, imagePreview, imageCapture)
+            imagePreview?.setSurfaceProvider(cameraView.createSurfaceProvider(camera?.cameraInfo))
+        } catch (e: Exception) {
+            // All exception
+            Toast.makeText(this, "Something is wrong", Toast.LENGTH_LONG).show()
+            e.printStackTrace()
+        }
+
+        // Set tap-to-focus handler
+        cameraView.afterMeasured {
+            cameraView.setOnTouchListener { _, event ->

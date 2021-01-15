@@ -242,3 +242,83 @@ class CameraActivity : AppCompatActivity() {
                 override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
                     savedImage = takenImage
                     lookPreview(savedImage!!.path)
+                }
+
+                override fun onError(exception: ImageCaptureException) {
+                    Toast.makeText(
+                        this@CameraActivity,
+                        "Failed to take a picture, try again",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    exception.printStackTrace()
+                }
+            }
+        )
+    }
+
+    /**
+     * Send intent to open image preview activity with a given image path.
+     *
+     * @param path  Image path on mobile
+     */
+    private fun lookPreview(path: String) {
+        val openImagePreviewIntent = Intent(this, ImagePreviewActivity::class.java)
+        openImagePreviewIntent.putExtra(ImagePreviewActivity.KEY_IMAGE_PATH, path)
+        startActivityForResult(openImagePreviewIntent, IMAGE_PREVIEW_ACTIVITY_REQUEST_CODE)
+    }
+
+    /**
+     * Override method to handle activity result.
+     * Used to receive image from gallery.
+     * Also how to treat an image should be deleted or not that depends from next activity result which is from an image preview.
+     *
+     * @param requestCode   Request code
+     * @param resultCode    The result of activity
+     * @param data          A return from activity
+     */
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == IMAGE_GALLERY_REQUEST_CODE) {
+            if (resultCode != Activity.RESULT_OK) {
+                // Must be OK, if not then should not go next
+                Toast.makeText(this, "Can't get a picture from gallery", Toast.LENGTH_LONG).show()
+            }
+
+            // Get image path from gallery app after successfully pick an image
+            val imageUri: Uri = data!!.data!!
+
+            // Convert image path that has content:// on its prefix into real path and look in image preview activity
+            Utility.getFile(this, imageUri)?.path?.let { lookPreview(it) }
+        } else if (requestCode == IMAGE_PREVIEW_ACTIVITY_REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_CANCELED && savedImage!!.path.contains("Android/media") && savedImage!!.exists()) {
+                // If the request is canceled, then assume the user declines the image to be used. So it must be deleted
+                savedImage!!.delete()
+            } else if (resultCode == Activity.RESULT_OK) {
+                finish()
+            }
+        }
+    }
+
+    /**
+     * Permission result from permission request.
+     * For this case, only use to check whether the application could be able to use camera or not.
+     *
+     * @param requestCode   Request code
+     * @param permissions   List of permission
+     * @param grantResults  List of granted permission
+     */
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == REQUEST_PERMISSION_CODE && grantResults[0] == PackageManager.PERMISSION_DENIED) {
+            Toast.makeText(
+                this@CameraActivity,
+                "Sorry, camera permission is needed",
+                Toast.LENGTH_LONG
+            ).show()
+        } else {
+            openCamera()

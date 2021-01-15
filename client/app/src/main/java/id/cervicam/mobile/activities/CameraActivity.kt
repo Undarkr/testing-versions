@@ -168,3 +168,77 @@ class CameraActivity : AppCompatActivity() {
         // Set tap-to-focus handler
         cameraView.afterMeasured {
             cameraView.setOnTouchListener { _, event ->
+                return@setOnTouchListener when (event.action) {
+                    MotionEvent.ACTION_DOWN -> {
+//                        println("down")
+                        true
+                    }
+                    MotionEvent.ACTION_UP -> {
+//                        println("up")
+                        val factory: MeteringPointFactory = SurfaceOrientedMeteringPointFactory(
+                            cameraView.width.toFloat(), cameraView.height.toFloat()
+                        )
+//                        println("Width ${event.x}")
+//                        println("Width ${event.y}")
+                        val autoFocusPoint = factory.createPoint(event.x, event.y)
+                        try {
+                            camera?.cameraControl?.startFocusAndMetering(
+                                FocusMeteringAction.Builder(
+                                    autoFocusPoint,
+                                    FocusMeteringAction.FLAG_AF
+                                ).apply {
+                                    println("Focus")
+                                    // focus only when the user tap the preview
+                                    disableAutoCancel()
+                                }.build()
+                            )
+                        } catch (e: CameraInfoUnavailableException) {
+                            Toast.makeText(this@CameraActivity, "cannot access camera", Toast.LENGTH_LONG).show()
+                        }
+                        true
+                    }
+                    else -> false // Unhandled event.
+                }
+            }
+        }
+    }
+
+    /**
+     * Set a current image on surface and save it to the media folder
+     * The filename format: "yyyy-MM-dd HH:mm:ss.jpeg"
+     *
+     */
+    private fun takePicture() {
+        // Don't take a picture if imageCapture have not been initialized
+        if (imageCapture == null) return
+
+        // Set file name
+        val fileName = "${SimpleDateFormat(
+            "yyyy-MM-dd HH:mm:ss",
+            Locale.US
+        ).format(System.currentTimeMillis())}.jpg"
+
+        // Get media folder
+        val mediaFolder = File(
+            "${Utility.getOutputDirectory(
+                this@CameraActivity
+            ).path}/images"
+        )
+
+        // Check whether the media folder exists or not, if doesn't then create the folder
+        if (!mediaFolder.exists()) {
+            mediaFolder.mkdirs()
+        }
+        val takenImage = File(mediaFolder, fileName)
+
+        // Set an empty file as output of image capturing
+        val outputOptions = ImageCapture.OutputFileOptions.Builder(takenImage).build()
+
+        // Create an image in given file
+        imageCapture!!.takePicture(
+            outputOptions,
+            ContextCompat.getMainExecutor(this),
+            object : ImageCapture.OnImageSavedCallback {
+                override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
+                    savedImage = takenImage
+                    lookPreview(savedImage!!.path)

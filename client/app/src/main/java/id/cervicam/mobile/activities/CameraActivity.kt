@@ -322,3 +322,17 @@ class CameraActivity : AppCompatActivity() {
             ).show()
         } else {
             openCamera()
+        }
+    }
+}
+
+inline fun PreviewView.afterMeasured(crossinline block: () -> Unit) {
+    viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+        override fun onGlobalLayout() {
+            if (measuredWidth > 0 && measuredHeight > 0) {
+                viewTreeObserver.removeOnGlobalLayoutListener(this)
+                block()
+            }
+        }
+    })
+}

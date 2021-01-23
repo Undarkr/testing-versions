@@ -1,3 +1,5 @@
 package id.cervicam.mobile.activities
 
-i
+import android.content.Intent
+import android.graphics.Color
+import android.os.

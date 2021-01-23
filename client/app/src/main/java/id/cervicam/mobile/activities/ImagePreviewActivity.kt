@@ -47,3 +47,84 @@ class ImagePreviewActivity : AppCompatActivity() {
         Utility.setStatusBarColor(window, this@ImagePreviewActivity, R.color.colorBlack)
         supportActionBar?.hide()
         setContentView(R.layout.activity_image_preview)
+
+        // Get image from argument and set it as original image
+        val imagePath: String = intent.getStringExtra(KEY_IMAGE_PATH)!!
+        originalImage = File(imagePath)
+
+        // Compress image if the size is more than 300 Kb
+        if (originalImage!!.length() >= 300 * 1000) {
+            previewedImage = File("${cacheDir}/image-preview/${Utility.getBasename(originalImage!!.path)}")
+            originalImage?.copyTo(previewedImage!!)
+            Utility.compressImage(previewedImage!!.path, 25)
+        } else {
+            // Use the original image to preview if the size is small enough
+            previewedImage = originalImage
+        }
+
+        val prevButton = Button.newInstance(
+            getString(R.string.activity_imagepreview_previous),
+            type = Button.ButtonType.CLEAN,
+            color = ContextCompat.getColor(this, R.color.colorWhite),
+            onClick = {
+                onBackPressed()
+            }
+        )
+
+        val nextButton = Button.newInstance(
+            getString(R.string.activity_imagepreview_next),
+            onClick = {
+                sendImageAndOpenResultActivity()
+            }
+        )
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.prevButtonView, prevButton)
+            .replace(R.id.nextButtonView, nextButton)
+            .commit()
+
+        // Load previewed image
+        Picasso.with(this)
+            .load(previewedImage)
+            .config(Bitmap.Config.RGB_565)
+            .into(imageView, object : com.squareup.picasso.Callback {
+                override fun onSuccess() {
+                    progressBarContainer.visibility = View.GONE
+                    imageContainer.visibility = View.VISIBLE
+                }
+
+                override fun onError() {
+                    Toast.makeText(
+                        this@ImagePreviewActivity,
+                        "Unable to show the image",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    setResult(Activity.RESULT_CANCELED)
+                    finish()
+                }
+            })
+    }
+
+    /**
+     * Send a canceled result to the one calls this activity and delete preview image from cache folder
+     *
+     */
+    override fun onBackPressed() {
+        if (originalImage!!.path != previewedImage!!.path) {
+            previewedImage!!.delete()
+        }
+        setResult(Activity.RESULT_CANCELED)
+        super.onBackPressed()
+    }
+
+    /**
+     * If user decides to use the image, then send it to server to be classified and call the page that shows the result
+     *
+     */
+    private fun sendImageAndOpenResultActivity() {
+        // Don't send any image if the image is none
+        if (originalImage == null) return
+
+        runBlocking {
+            launch(Dispatchers.Default) {

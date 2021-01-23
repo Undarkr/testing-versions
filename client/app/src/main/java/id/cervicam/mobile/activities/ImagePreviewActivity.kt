@@ -128,3 +128,41 @@ class ImagePreviewActivity : AppCompatActivity() {
 
         runBlocking {
             launch(Dispatchers.Default) {
+                // Send to server
+                MainService.classifyImage(
+                    this@ImagePreviewActivity,
+                    image = originalImage!!,
+                    callback = object: Callback {
+                        override fun onFailure(call: Call, e: IOException) {
+                            e.printStackTrace()
+                        }
+
+                        override fun onResponse(call: Call, response: Response) {
+                            if (response.isSuccessful) {
+                                runOnUiThread {
+                                    if (response.code() == 201) {
+                                        // Get a request id from created classification
+                                        val body = Utility.parseJSON(response.body()?.string())
+                                        val id: String = body["id"].toString()
+
+                                        // Open the result on another activity
+                                        val openResultActivityIntent = Intent(this@ImagePreviewActivity, ResultActivity::class.java)
+                                        openResultActivityIntent.putExtra(ResultActivity.KEY_REQUEST_ID, id)
+                                        startActivity(openResultActivityIntent)
+
+                                        setResult(Activity.RESULT_OK)
+                                        finish()
+                                    } else {
+                                        Toast.makeText(this@ImagePreviewActivity, "Failed to create a classification on server", Toast.LENGTH_LONG).show()
+                                    }
+                                }
+                            } else {
+                                Toast.makeText(this@ImagePreviewActivity, "Request failed", Toast.LENGTH_LONG).show()
+                            }
+                        }
+                    }
+                )
+            }
+        }
+    }
+}

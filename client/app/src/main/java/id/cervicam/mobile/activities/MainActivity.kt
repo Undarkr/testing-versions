@@ -11,3 +11,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import id.cervicam.mobile.R
+import id.cervicam.mobile.fragments.Button
+import

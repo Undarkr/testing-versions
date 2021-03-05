@@ -15,4 +15,5 @@ import id.cervicam.mobile.R
 import id.cervicam.mobile.fragments.Button
 import id.cervicam.mobile.helper.Utility
 import id.cervicam.mobile.services.MainService
-import kotlin
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers

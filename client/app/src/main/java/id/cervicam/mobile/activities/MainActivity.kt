@@ -17,3 +17,6 @@ import id.cervicam.mobile.helper.Utility
 import id.cervicam.mobile.services.MainService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+i

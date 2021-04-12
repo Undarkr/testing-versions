@@ -27,4 +27,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.CountDownLatch
 import kotlin.collections.ArrayList
-import kotlin.c
+import kotlin.collections.HashMap
+
+/**
+ * A starter activity when the app is starting
+ *

@@ -32,3 +32,7 @@ import kotlin.collections.HashMap
 /**
  * A starter activity when the app is starting
  *
+ */
+class MainActivity : AppCompatActivity() {
+    companion object {
+        const val G

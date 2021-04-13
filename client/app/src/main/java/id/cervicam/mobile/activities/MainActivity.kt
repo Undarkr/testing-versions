@@ -38,4 +38,5 @@ class MainActivity : AppCompatActivity() {
         const val GO_TO_ANOTHER_ACTIVITY_CODE = 101
     }
 
-    // List of classification 
+    // List of classification request that has been sent from server
+    private var classifications:

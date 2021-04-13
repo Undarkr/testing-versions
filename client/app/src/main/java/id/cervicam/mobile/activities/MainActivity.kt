@@ -35,4 +35,7 @@ import kotlin.collections.HashMap
  */
 class MainActivity : AppCompatActivity() {
     companion object {
-        const val G
+        const val GO_TO_ANOTHER_ACTIVITY_CODE = 101
+    }
+
+    // List of classification 

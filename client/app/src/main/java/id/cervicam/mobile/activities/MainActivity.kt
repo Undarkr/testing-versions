@@ -39,4 +39,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     // List of classification request that has been sent from server
-    private var classifications:
+    private var classifications: ArrayList<Pair<String, String>> = ArrayList()
+    private var nextUrl: String? = 

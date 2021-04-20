@@ -40,4 +40,10 @@ class MainActivity : AppCompatActivity() {
 
     // List of classification request that has been sent from server
     private var classifications: ArrayList<Pair<String, String>> = ArrayList()
-    private var nextUrl: String? = 
+    private var nextUrl: String? = null
+
+
+    /**
+     * Create a view of main activity and set all fragments
+     *
+ 

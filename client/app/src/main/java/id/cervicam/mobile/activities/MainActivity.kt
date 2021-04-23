@@ -46,4 +46,6 @@ class MainActivity : AppCompatActivity() {
     /**
      * Create a view of main activity and set all fragments
      *
- 
+     * @param savedInstanceState    Bundle of activity
+     */
+  

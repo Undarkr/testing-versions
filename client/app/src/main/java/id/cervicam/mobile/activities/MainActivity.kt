@@ -56,4 +56,5 @@ class MainActivity : AppCompatActivity() {
         Utility.setUser(this)
         showAllClassifications()
 
-        resultListView.onItemC
+        resultListView.onItemClickListener = object : AdapterView.OnItemClickListener {
+            overri

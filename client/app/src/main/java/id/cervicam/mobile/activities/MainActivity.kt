@@ -57,4 +57,6 @@ class MainActivity : AppCompatActivity() {
         showAllClassifications()
 
         resultListView.onItemClickListener = object : AdapterView.OnItemClickListener {
-            overri
+            override fun onItemClick(
+                parent: AdapterView<*>?,
+    

@@ -54,4 +54,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         Utility.setUser(this)
-   
+        showAllClassifications()
+
+        resultListView.onItemC

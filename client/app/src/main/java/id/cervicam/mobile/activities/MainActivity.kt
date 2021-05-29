@@ -59,4 +59,6 @@ class MainActivity : AppCompatActivity() {
         resultListView.onItemClickListener = object : AdapterView.OnItemClickListener {
             override fun onItemClick(
                 parent: AdapterView<*>?,
-    
+                view: View?,
+                position: Int,
+              

@@ -61,4 +61,6 @@ class MainActivity : AppCompatActivity() {
                 parent: AdapterView<*>?,
                 view: View?,
                 position: Int,
-              
+                id: Long
+            ) {
+                openResultActivity(classifications[p

@@ -67,4 +67,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        refresher.setProgressBackgroundColorScheme
+        refresher.setProgressBackgroundColorSchemeColor(
+            ContextCompat.getColor(
+                this,
+             

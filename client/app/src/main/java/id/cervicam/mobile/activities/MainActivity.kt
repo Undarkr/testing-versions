@@ -63,4 +63,8 @@ class MainActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                openResultActivity(classifications[p
+                openResultActivity(classifications[position].second)
+            }
+        }
+
+        refresher.setProgressBackgroundColorScheme

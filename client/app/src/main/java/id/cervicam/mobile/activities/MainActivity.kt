@@ -73,4 +73,5 @@ class MainActivity : AppCompatActivity() {
                 R.color.colorPrimary
             )
         )
-        refresher.setC
+        refresher.setColorSchemeColors(Color.WHITE)
+        refresher.setOnRefreshListener(object

@@ -77,4 +77,9 @@ class MainActivity : AppCompatActivity() {
         refresher.setOnRefreshListener(object : SwipeRefreshLayout.OnRefreshListener {
             override fun onRefresh() {
                 showAllClassifications()
-                refresher.isRefres
+                refresher.isRefreshing = false
+            }
+        })
+
+        scrollView.viewTreeObserver
+            .addOn

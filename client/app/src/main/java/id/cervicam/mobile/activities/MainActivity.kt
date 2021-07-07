@@ -74,4 +74,5 @@ class MainActivity : AppCompatActivity() {
             )
         )
         refresher.setColorSchemeColors(Color.WHITE)
-        refresher.setOnRefreshListener(object
+        refresher.setOnRefreshListener(object : SwipeRefreshLayout.OnRefreshListener {
+            override fun onRefresh() 

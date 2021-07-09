@@ -82,4 +82,6 @@ class MainActivity : AppCompatActivity() {
         })
 
         scrollView.viewTreeObserver
-            .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedL
+            .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedListener {
+                override fun onScrollChanged() {
+//            

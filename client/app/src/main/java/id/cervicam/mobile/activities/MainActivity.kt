@@ -82,4 +82,4 @@ class MainActivity : AppCompatActivity() {
         })
 
         scrollView.viewTreeObserver
-            .addOn
+            .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedL

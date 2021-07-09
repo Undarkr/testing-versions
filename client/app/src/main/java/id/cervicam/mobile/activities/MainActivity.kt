@@ -84,4 +84,5 @@ class MainActivity : AppCompatActivity() {
         scrollView.viewTreeObserver
             .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedListener {
                 override fun onScrollChanged() {
-//                    println("${scrollView.getChildAt(0).height} | ${scrollView.height}"
+//                    println("${scrollView.getChildAt(0).height} | ${scrollView.height}")
+                    if (scrollView.getChildAt(0).bottom <= scrollView.heigh

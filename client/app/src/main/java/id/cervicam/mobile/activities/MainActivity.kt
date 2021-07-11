@@ -86,4 +86,10 @@ class MainActivity : AppCompatActivity() {
                 override fun onScrollChanged() {
 //                    println("${scrollView.getChildAt(0).height} | ${scrollView.height}")
                     if (scrollView.getChildAt(0).bottom <= scrollView.height + scrollView.scrollY) {
-                        showAllClassifications(tr
+                        showAllClassifications(true)
+                    }
+                }
+
+            })
+
+        val openCa

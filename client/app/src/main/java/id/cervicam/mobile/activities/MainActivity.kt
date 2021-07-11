@@ -92,4 +92,5 @@ class MainActivity : AppCompatActivity() {
 
             })
 
-        val openCa
+        val openCameraButton = Button.newInstance(
+            getString(R.string.activity

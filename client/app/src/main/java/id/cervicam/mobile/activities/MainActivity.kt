@@ -93,4 +93,6 @@ class MainActivity : AppCompatActivity() {
             })
 
         val openCameraButton = Button.newInstance(
-            getString(R.string.activity
+            getString(R.string.activity_main_opencamera),
+            clickable = true,
+            type = B

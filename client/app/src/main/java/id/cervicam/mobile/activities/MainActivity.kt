@@ -98,4 +98,4 @@ class MainActivity : AppCompatActivity() {
             type = Button.ButtonType.FILLED,
             onClick = {
                 val openCameraActivityIntent = Intent(this, CameraActivity::class.java)
-               
+                startActivityForResult(openCameraActivityIntent, GO_TO_ANOTHER_ACTIVITY_CODE)

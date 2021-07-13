@@ -97,4 +97,5 @@ class MainActivity : AppCompatActivity() {
             clickable = true,
             type = Button.ButtonType.FILLED,
             onClick = {
-                val openCameraAc
+                val openCameraActivityIntent = Intent(this, CameraActivity::class.java)
+               

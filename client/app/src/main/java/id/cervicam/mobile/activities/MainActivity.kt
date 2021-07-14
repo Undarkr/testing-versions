@@ -99,3 +99,8 @@ class MainActivity : AppCompatActivity() {
             onClick = {
                 val openCameraActivityIntent = Intent(this, CameraActivity::class.java)
                 startActivityForResult(openCameraActivityIntent, GO_TO_ANOTHER_ACTIVITY_CODE)
+            }
+        )
+
+        supportFragmentManager
+          

@@ -104,4 +104,8 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.openCameraButton, o
+            .replace(R.id.openCameraButton, openCameraButton)
+            .commit()
+    }
+
+    override fun onActivity

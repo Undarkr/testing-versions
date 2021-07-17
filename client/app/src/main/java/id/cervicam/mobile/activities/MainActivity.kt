@@ -115,4 +115,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    priv
+    private fun showAllClassifications(shouldGetNextClassifications: Boolean = false) {
+  

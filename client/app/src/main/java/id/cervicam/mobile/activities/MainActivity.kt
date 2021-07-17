@@ -110,4 +110,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == GO_TO_ANOTHER_ACTIV
+        if (requestCode == GO_TO_ANOTHER_ACTIVITY_CODE) {
+            showAllClassifications()
+        }
+    }
+
+    priv

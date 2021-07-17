@@ -116,4 +116,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showAllClassifications(shouldGetNextClassifications: Boolean = false) {
-  
+        // Don't do anything if next url is empty
+        

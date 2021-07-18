@@ -123,4 +123,5 @@ class MainActivity : AppCompatActivity() {
         val waitRequest = CountDownLatch(1)
         runBlocking {
             launch(Dispatchers.Default) {
-                if (!shou
+                if (!shouldGetNextClassifications) {
+                    val query = HashMap<St

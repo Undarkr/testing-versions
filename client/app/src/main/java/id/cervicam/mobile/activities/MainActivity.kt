@@ -119,4 +119,6 @@ class MainActivity : AppCompatActivity() {
         // Don't do anything if next url is empty
         if (shouldGetNextClassifications && nextUrl == null) return
 
-        var body: Map<Strin
+        var body: Map<String, Any>? = null
+        val waitRequest = CountDownLatch(1)
+       

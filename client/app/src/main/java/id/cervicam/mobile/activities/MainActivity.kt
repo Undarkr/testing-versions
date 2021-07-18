@@ -121,4 +121,6 @@ class MainActivity : AppCompatActivity() {
 
         var body: Map<String, Any>? = null
         val waitRequest = CountDownLatch(1)
-       
+        runBlocking {
+            launch(Dispatchers.Default) {
+                if (!shou

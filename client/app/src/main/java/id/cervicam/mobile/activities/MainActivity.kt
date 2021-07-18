@@ -117,4 +117,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun showAllClassifications(shouldGetNextClassifications: Boolean = false) {
         // Don't do anything if next url is empty
-        
+        if (shouldGetNextClassifications && nextUrl == null) return
+
+        var body: Map<Strin

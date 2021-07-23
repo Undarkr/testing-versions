@@ -124,4 +124,6 @@ class MainActivity : AppCompatActivity() {
         runBlocking {
             launch(Dispatchers.Default) {
                 if (!shouldGetNextClassifications) {
-                    val query = HashMap<St
+                    val query = HashMap<String, String>()
+                    query["ordering"] = "-created_at"
+           

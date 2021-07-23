@@ -126,4 +126,5 @@ class MainActivity : AppCompatActivity() {
                 if (!shouldGetNextClassifications) {
                     val query = HashMap<String, String>()
                     query["ordering"] = "-created_at"
-           
+                    MainService.getAllClassifications(
+                        this@MainA

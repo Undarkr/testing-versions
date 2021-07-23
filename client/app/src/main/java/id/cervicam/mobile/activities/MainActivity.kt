@@ -127,4 +127,6 @@ class MainActivity : AppCompatActivity() {
                     val query = HashMap<String, String>()
                     query["ordering"] = "-created_at"
                     MainService.getAllClassifications(
-                        this@MainA
+                        this@MainActivity,
+                        callback = object : Callback {
+             

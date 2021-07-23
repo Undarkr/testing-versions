@@ -129,4 +129,5 @@ class MainActivity : AppCompatActivity() {
                     MainService.getAllClassifications(
                         this@MainActivity,
                         callback = object : Callback {
-             
+                            override fun onFailure(call: Call, e: IOException) {
+      

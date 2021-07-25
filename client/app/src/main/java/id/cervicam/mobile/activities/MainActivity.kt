@@ -131,4 +131,7 @@ class MainActivity : AppCompatActivity() {
                         callback = object : Callback {
                             override fun onFailure(call: Call, e: IOException) {
                                 e.printStackTrace()
-                                wait
+                                waitRequest.countDown()
+                            }
+
+                        

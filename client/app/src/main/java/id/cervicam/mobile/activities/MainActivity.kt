@@ -134,4 +134,5 @@ class MainActivity : AppCompatActivity() {
                                 waitRequest.countDown()
                             }
 
-                        
+                            override fun onResponse(call: Call, response: Response) {
+                    

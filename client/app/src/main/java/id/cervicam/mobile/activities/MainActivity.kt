@@ -137,4 +137,5 @@ class MainActivity : AppCompatActivity() {
                             override fun onResponse(call: Call, response: Response) {
                                 if (response.isSuccessful) {
                                     if (response.code() == 200) {
-                           
+                                        body = Utility.parseJSON(response.body()?.string())
+          

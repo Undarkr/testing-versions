@@ -138,4 +138,5 @@ class MainActivity : AppCompatActivity() {
                                 if (response.isSuccessful) {
                                     if (response.code() == 200) {
                                         body = Utility.parseJSON(response.body()?.string())
-          
+                                    } else {
+                         

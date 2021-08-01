@@ -144,3 +144,6 @@ class MainActivity : AppCompatActivity() {
                                             "Unable to get classifications",
                                             Toast.LENGTH_LONG
                                         ).show()
+                                    }
+                                }
+ 

@@ -141,4 +141,5 @@ class MainActivity : AppCompatActivity() {
                                     } else {
                                         Toast.makeText(
                                             this@MainActivity,
-                         
+                                            "Unable to get classifications",
+                                    

@@ -147,4 +147,6 @@ class MainActivity : AppCompatActivity() {
                                     }
                                 }
                                 waitRequest.countDown()
-                
+                            }
+                        },
+                        query = query

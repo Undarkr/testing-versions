@@ -151,4 +151,6 @@ class MainActivity : AppCompatActivity() {
                         },
                         query = query
                     )
-                } else if (shouldGetNextClassifications 
+                } else if (shouldGetNextClassifications && nextUrl != null) {
+                    MainService.sendRequest(
+           

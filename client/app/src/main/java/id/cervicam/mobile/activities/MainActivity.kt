@@ -156,4 +156,5 @@ class MainActivity : AppCompatActivity() {
                         this@MainActivity,
                         uri = nextUrl!!,
                         useAuth = true,
-                        method = MainService.H
+                        method = MainService.HttpMethod.GET,
+                        callback = object : Callba

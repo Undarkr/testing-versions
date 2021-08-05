@@ -154,4 +154,6 @@ class MainActivity : AppCompatActivity() {
                 } else if (shouldGetNextClassifications && nextUrl != null) {
                     MainService.sendRequest(
                         this@MainActivity,
-                        uri = next
+                        uri = nextUrl!!,
+                        useAuth = true,
+                        method = MainService.H

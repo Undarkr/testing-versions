@@ -157,4 +157,5 @@ class MainActivity : AppCompatActivity() {
                         uri = nextUrl!!,
                         useAuth = true,
                         method = MainService.HttpMethod.GET,
-                        callback = object : Callba
+                        callback = object : Callback {
+                            override fun onFailure(call: Call, e: IOExcept

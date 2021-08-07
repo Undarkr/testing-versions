@@ -158,4 +158,6 @@ class MainActivity : AppCompatActivity() {
                         useAuth = true,
                         method = MainService.HttpMethod.GET,
                         callback = object : Callback {
-                            override fun onFailure(call: Call, e: IOExcept
+                            override fun onFailure(call: Call, e: IOException) {
+                                e.printStackTrace()
+            

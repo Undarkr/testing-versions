@@ -171,4 +171,6 @@ class MainActivity : AppCompatActivity() {
                                         Toast.makeText(
                                             this@MainActivity,
                                             "Unable to get next classifications",
-                                            
+                                            Toast.LENGTH_LONG
+                                        ).show()
+                  

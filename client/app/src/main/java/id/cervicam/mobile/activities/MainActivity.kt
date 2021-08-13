@@ -175,4 +175,6 @@ class MainActivity : AppCompatActivity() {
                                         ).show()
                                     }
                                 }
-                  
+                                waitRequest.countDown()
+                            }
+           

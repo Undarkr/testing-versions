@@ -177,4 +177,7 @@ class MainActivity : AppCompatActivity() {
                                 }
                                 waitRequest.countDown()
                             }
-           
+                        }
+                    )
+                } else {
+            

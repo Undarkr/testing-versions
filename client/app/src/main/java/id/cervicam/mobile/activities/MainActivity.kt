@@ -180,4 +180,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     )
                 } else {
-            
+                    waitRequest.countDown()
+                }
+            }
+  

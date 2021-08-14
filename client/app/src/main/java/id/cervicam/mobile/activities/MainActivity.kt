@@ -183,4 +183,8 @@ class MainActivity : AppCompatActivity() {
                     waitRequest.countDown()
                 }
             }
-  
+        }
+
+        waitRequest.await()
+
+        // Don't do anything if bo

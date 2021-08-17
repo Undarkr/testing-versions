@@ -187,4 +187,9 @@ class MainActivity : AppCompatActivity() {
 
         waitRequest.await()
 
-        // Don't do anything if bo
+        // Don't do anything if body is none
+        if (body == null) {
+            return
+        }
+
+  

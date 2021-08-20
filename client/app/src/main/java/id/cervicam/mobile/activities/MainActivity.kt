@@ -196,4 +196,7 @@ class MainActivity : AppCompatActivity() {
         val result = body?.get("results") as ArrayList<*>
 
         if (!shouldGetNextClassifications) {
-            classificat
+            classifications = ArrayList()
+        }
+        for (element in result) {
+            val obj = elem

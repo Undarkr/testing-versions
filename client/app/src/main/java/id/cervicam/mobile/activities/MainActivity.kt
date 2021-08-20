@@ -192,4 +192,5 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-  
+        nextUrl = body?.get("next") as String?
+        val result = body?.get("result

@@ -193,4 +193,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         nextUrl = body?.get("next") as String?
-        val result = body?.get("result
+        val result = body?.get("results") as ArrayList<*>
+
+        if (!shouldGetNextClassifications) {
+            classificat

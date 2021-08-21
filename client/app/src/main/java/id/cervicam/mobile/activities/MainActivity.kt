@@ -199,4 +199,6 @@ class MainActivity : AppCompatActivity() {
             classifications = ArrayList()
         }
         for (element in result) {
-            val obj = elem
+            val obj = element as Map<*, *>
+            val dateParser = SimpleDateFormat(
+    

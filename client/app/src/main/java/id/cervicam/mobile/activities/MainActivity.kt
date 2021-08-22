@@ -201,4 +201,5 @@ class MainActivity : AppCompatActivity() {
         for (element in result) {
             val obj = element as Map<*, *>
             val dateParser = SimpleDateFormat(
-    
+                "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+                Locale.getDefau

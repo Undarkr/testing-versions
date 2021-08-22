@@ -202,4 +202,6 @@ class MainActivity : AppCompatActivity() {
             val obj = element as Map<*, *>
             val dateParser = SimpleDateFormat(
                 "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-                Locale.getDefau
+                Locale.getDefault()
+            )
+            dateParser.timeZone = TimeZone.getTimeZone("UT

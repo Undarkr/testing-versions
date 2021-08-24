@@ -204,4 +204,7 @@ class MainActivity : AppCompatActivity() {
                 "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
                 Locale.getDefault()
             )
-            dateParser.timeZone = TimeZone.getTimeZone("UT
+            dateParser.timeZone = TimeZone.getTimeZone("UTC")
+
+            val name: String =
+                SimpleDateFormat("yyyy-MM-dd 

@@ -211,4 +211,6 @@ class MainActivity : AppCompatActivity() {
                     .format(dateParser.parse(obj["created_at"].toString())!!)
 
             classifications.add(
-                Pai
+                Pair(
+                    "[${classifications.size + 1}] $name",
+                    obj["id"].toString()

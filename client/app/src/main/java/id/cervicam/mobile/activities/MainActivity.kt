@@ -221,4 +221,5 @@ class MainActivity : AppCompatActivity() {
         runOnUiThread {
             resultListView.adapter = ArrayAdapter(
                 this@MainActivity,
-    
+                android.R.layout.simple_list_item_1,
+                cla

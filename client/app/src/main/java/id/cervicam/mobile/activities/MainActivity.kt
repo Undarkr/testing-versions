@@ -219,4 +219,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         runOnUiThread {
-          
+            resultListView.adapter = ArrayAdapter(
+                this@MainActivity,
+    

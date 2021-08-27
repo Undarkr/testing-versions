@@ -225,4 +225,9 @@ class MainActivity : AppCompatActivity() {
                 classifications.map {
                     it.first
                 }
-          
+            )
+        }
+    }
+
+    /**
+     * Open classification result from a given request 

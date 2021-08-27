@@ -222,4 +222,7 @@ class MainActivity : AppCompatActivity() {
             resultListView.adapter = ArrayAdapter(
                 this@MainActivity,
                 android.R.layout.simple_list_item_1,
-                cla
+                classifications.map {
+                    it.first
+                }
+          

@@ -234,4 +234,5 @@ class MainActivity : AppCompatActivity() {
      *
      * @param requestId   Request id of classification
      */
-    
+    private fun openResultActivity(requestId: String) {
+        val 

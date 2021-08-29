@@ -235,4 +235,5 @@ class MainActivity : AppCompatActivity() {
      * @param requestId   Request id of classification
      */
     private fun openResultActivity(requestId: String) {
-        val 
+        val showResultActivity = Intent(this, ResultActivity::class.java)
+        showResultA

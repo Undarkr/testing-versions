@@ -230,4 +230,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Open classification result from a given request 
+     * Open classification result from a given request id
+     *
+     * @param requestId   Request id of classification
+     */
+    

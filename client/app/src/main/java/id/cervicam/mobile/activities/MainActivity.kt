@@ -236,4 +236,4 @@ class MainActivity : AppCompatActivity() {
      */
     private fun openResultActivity(requestId: String) {
         val showResultActivity = Intent(this, ResultActivity::class.java)
-        showResultA
+        showResultActivity.putExtra(ResultActivity.KEY_REQUEST_ID, requestId

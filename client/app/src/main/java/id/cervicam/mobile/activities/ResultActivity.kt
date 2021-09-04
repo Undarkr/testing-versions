@@ -69,3 +69,45 @@ class ResultActivity : AppCompatActivity() {
             MainService.getClassification(
                 this@ResultActivity,
                 id = requestId,
+                callback = object : Callback {
+                    override fun onFailure(call: Call, e: IOException) {
+                        e.printStackTrace()
+                    }
+
+                    override fun onResponse(call: Call, response: Response) {
+                        if (response.isSuccessful) {
+                            runOnUiThread {
+                                if (response.code() == 200) {
+                                    val body = Utility.parseJSON(response.body()?.string())
+                                    Picasso.with(this@ResultActivity)
+                                        .load(body["image_url"].toString())
+                                        .config(Bitmap.Config.RGB_565)
+                                        .into(imageView)
+
+                                    statusTextView.text =
+                                        (body["status"] as HashMap<*, *>)["label"].toString()
+                                    resultTextView.text =
+                                        (body["result"] as HashMap<*, *>)["label"].toString()
+                                } else {
+                                    Toast.makeText(
+                                        this@ResultActivity,
+                                        "Unable to get the classification, try again later",
+                                        Toast.LENGTH_LONG
+                                    ).show()
+                                }
+                            }
+                        } else {
+                            Toast.makeText(this@ResultActivity, "Request failed", Toast.LENGTH_LONG)
+                                .show()
+                        }
+                    }
+                }
+            )
+        }
+    }
+
+//    private fun setResult(responseBody: HashMap<String, Any>) = runBlocking {
+//        val imageUri: String = responseBody["thumbnailUrl"] as String
+//        Picasso.with(this@ResultActivity).load(imageUri).into(imageView)
+//    }
+}

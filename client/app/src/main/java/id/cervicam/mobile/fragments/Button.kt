@@ -88,3 +88,16 @@ class Button : Fragment() {
         if (color != -1) {
             button.setTextColor(color)
         }
+
+        if (!clickable!!) {
+            background.setColor(ContextCompat.getColor(context!!, R.color.colorGray))
+            button.setTextColor(ContextCompat.getColor(context!!, R.color.colorBlack))
+        }
+
+        button.setOnClickListener {
+            if (clickable) {
+                onClick?.let { it1 -> it1() }
+            }
+        }
+    }
+}

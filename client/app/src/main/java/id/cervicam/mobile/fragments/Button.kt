@@ -29,3 +29,62 @@ class Button : Fragment() {
 
         fun newInstance(
             label: String,
+            type: ButtonType = ButtonType.FILLED,
+            @ColorInt color: Int = -1,
+            clickable: Boolean = true,
+
+            onClick: (() -> Unit)? = null
+        ): Button {
+            val button: Button = Button()
+
+            val args: Bundle = Bundle()
+            args.putString(Button.ARG_LABEL, label)
+            args.putString(Button.ARG_TYPE, type.name)
+            args.putInt(Button.ARG_COLOR, color)
+            args.putBoolean(Button.ARG_CLICKABLE, clickable)
+
+            button.arguments = args
+            button.onClick = onClick
+            return button
+        }
+    }
+
+    private var onClick: (() -> Unit)? = null
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_button, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        button.text = arguments!!.getString(ARG_LABEL)
+        val clickable: Boolean? = arguments!!.getBoolean(ARG_CLICKABLE)
+
+        val background: GradientDrawable = button.background as GradientDrawable
+        when (arguments!!.getString(ARG_TYPE)) {
+            ButtonType.FILLED.name -> {
+                background.setColor(ContextCompat.getColor(context!!, R.color.colorAccent))
+                button.setTextColor(ContextCompat.getColor(context!!, R.color.colorWhite))
+                background.setStroke(0, Color.TRANSPARENT)
+            }
+            ButtonType.OUTLINE.name -> {
+                background.setColor(Color.TRANSPARENT)
+                button.setTextColor(ContextCompat.getColor(context!!, R.color.colorAccent))
+                background.setStroke(2, ContextCompat.getColor(context!!, R.color.colorAccent))
+            }
+            ButtonType.CLEAN.name -> {
+                background.setColor(Color.TRANSPARENT)
+                button.setTextColor(ContextCompat.getColor(context!!, R.color.colorAccent))
+                background.setStroke(0, Color.TRANSPARENT)
+            }
+        }
+
+        @ColorInt val color: Int = arguments!!.getInt(ARG_COLOR)
+        if (color != -1) {
+            button.setTextColor(color)
+        }

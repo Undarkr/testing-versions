@@ -5,4 +5,7 @@ import android.content.Context
 import android.content.SharedPreferences
 
 class LocalStorage {
-    enum class PreferenceKeys(val valu
+    enum class PreferenceKeys(val value: String) {
+        ID("ID"),
+        USERNAME("USERNAME"),
+        PASSWORD("P

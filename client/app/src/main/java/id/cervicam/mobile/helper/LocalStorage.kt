@@ -8,4 +8,9 @@ class LocalStorage {
     enum class PreferenceKeys(val value: String) {
         ID("ID"),
         USERNAME("USERNAME"),
-        PASSWORD("P
+        PASSWORD("PASSWORD"),
+        TOKEN("TOKEN")
+    }
+
+    companion object {
+      

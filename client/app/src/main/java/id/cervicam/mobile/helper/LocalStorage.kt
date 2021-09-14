@@ -13,4 +13,6 @@ class LocalStorage {
     }
 
     companion object {
-      
+        private const val PREFERENCE_ID = "CERVICAM_PREF"
+
+        private fun getPreferences(co

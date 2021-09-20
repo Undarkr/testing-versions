@@ -15,4 +15,5 @@ class LocalStorage {
     companion object {
         private const val PREFERENCE_ID = "CERVICAM_PREF"
 
-        private fun getPreferences(co
+        private fun getPreferences(context: Context): SharedPreferences {
+            return context.getSharedPrefer

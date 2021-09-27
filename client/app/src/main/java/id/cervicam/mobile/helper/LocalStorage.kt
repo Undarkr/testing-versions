@@ -19,4 +19,8 @@ class LocalStorage {
             return context.getSharedPreferences(
                 PREFERENCE_ID,
                 Context.MODE_PRIVATE
-  
+            )
+        }
+
+        @SuppressLint("ApplySharedPref")
+        fun set(

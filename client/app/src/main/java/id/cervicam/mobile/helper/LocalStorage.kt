@@ -16,4 +16,7 @@ class LocalStorage {
         private const val PREFERENCE_ID = "CERVICAM_PREF"
 
         private fun getPreferences(context: Context): SharedPreferences {
-            return context.getSharedPrefer
+            return context.getSharedPreferences(
+                PREFERENCE_ID,
+                Context.MODE_PRIVATE
+  

@@ -24,4 +24,5 @@ class LocalStorage {
 
         @SuppressLint("ApplySharedPref")
         fun set(context: Context, key: String, value: String) {
-            val sharedPreferences 
+            val sharedPreferences = getPreferences(context)
+            val sharedPreferencesEditor: SharedPreferences.Edit

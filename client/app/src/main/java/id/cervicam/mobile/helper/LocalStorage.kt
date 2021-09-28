@@ -23,4 +23,5 @@ class LocalStorage {
         }
 
         @SuppressLint("ApplySharedPref")
-        fun set(
+        fun set(context: Context, key: String, value: String) {
+            val sharedPreferences 

@@ -26,4 +26,5 @@ class LocalStorage {
         fun set(context: Context, key: String, value: String) {
             val sharedPreferences = getPreferences(context)
             val sharedPreferencesEditor: SharedPreferences.Editor = sharedPreferences.edit()
-            sharedPreferencesEditor.
+            sharedPreferencesEditor.putString(key, value)
+            sharedPreferencesEditor.commit()

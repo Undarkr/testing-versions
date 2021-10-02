@@ -28,3 +28,7 @@ class LocalStorage {
             val sharedPreferencesEditor: SharedPreferences.Editor = sharedPreferences.edit()
             sharedPreferencesEditor.putString(key, value)
             sharedPreferencesEditor.commit()
+        }
+
+        fun get(context: Context, key: String): String? {
+            v

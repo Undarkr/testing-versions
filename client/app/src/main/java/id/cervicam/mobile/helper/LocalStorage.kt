@@ -31,4 +31,5 @@ class LocalStorage {
         }
 
         fun get(context: Context, key: String): String? {
-            v
+            val sharedPreferences = getPreferences(context)
+            return s

@@ -32,4 +32,7 @@ class LocalStorage {
 
         fun get(context: Context, key: String): String? {
             val sharedPreferences = getPreferences(context)
-            return s
+            return sharedPreferences.getString(key, null)
+        }
+    }
+}

@@ -6,4 +6,7 @@ import android.graphics.BitmapFactory
 import android.media.ExifInterface
 import android.net.Uri
 import android.provider.OpenableColumns
-import android.view
+import android.view.Window
+import android.view.WindowManager
+import android.widget.Toast
+import

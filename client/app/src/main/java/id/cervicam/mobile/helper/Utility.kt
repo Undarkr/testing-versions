@@ -15,4 +15,6 @@ import com.google.gson.Gson
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import id.cervicam.mobile.
+import id.cervicam.mobile.R
+import id.cervicam.mobile.activities.CameraActivity
+import id.cervicam.m

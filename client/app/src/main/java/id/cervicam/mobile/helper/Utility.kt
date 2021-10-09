@@ -19,4 +19,7 @@ import id.cervicam.mobile.R
 import id.cervicam.mobile.activities.CameraActivity
 import id.cervicam.mobile.services.MainService
 import kotlinx.coroutines.Dispatchers
-import k
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import okhttp3.Call
+impo

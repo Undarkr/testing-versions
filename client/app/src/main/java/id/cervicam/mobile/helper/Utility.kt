@@ -17,4 +17,6 @@ import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import id.cervicam.mobile.R
 import id.cervicam.mobile.activities.CameraActivity
-import id.cervicam.m
+import id.cervicam.mobile.services.MainService
+import kotlinx.coroutines.Dispatchers
+import k

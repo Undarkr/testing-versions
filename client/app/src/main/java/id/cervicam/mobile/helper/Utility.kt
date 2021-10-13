@@ -32,4 +32,10 @@ import kotlin.collections.HashMap
 
 
 /**
- * Collection of common func
+ * Collection of common functions
+ *
+ */
+class Utility {
+    companion object {
+        /**
+         * H

@@ -41,4 +41,6 @@ class Utility {
          * Hide all notifications on status bar
          * It is helpful to avoid user from notifications and let them to focus on current activity
          *
-    
+         * @param window    Window of activity
+         */
+        fun hideStatusBar(window: W

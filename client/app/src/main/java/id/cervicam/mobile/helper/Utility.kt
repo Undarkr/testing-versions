@@ -43,4 +43,6 @@ class Utility {
          *
          * @param window    Window of activity
          */
-        fun hideStatusBar(window: W
+        fun hideStatusBar(window: Window) {
+            window.setFlags(
+                WindowManager.L

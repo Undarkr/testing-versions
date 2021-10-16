@@ -39,4 +39,6 @@ class Utility {
     companion object {
         /**
          * Hide all notifications on status bar
-         * It is helpful to avoid 
+         * It is helpful to avoid user from notifications and let them to focus on current activity
+         *
+    

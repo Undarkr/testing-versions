@@ -38,4 +38,5 @@ import kotlin.collections.HashMap
 class Utility {
     companion object {
         /**
-         * H
+         * Hide all notifications on status bar
+         * It is helpful to avoid 

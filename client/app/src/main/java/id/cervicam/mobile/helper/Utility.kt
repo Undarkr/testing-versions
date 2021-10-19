@@ -51,4 +51,5 @@ class Utility {
         }
 
         /**
-         *
+         * Set status bar color as you want by passing color id through argument
+        

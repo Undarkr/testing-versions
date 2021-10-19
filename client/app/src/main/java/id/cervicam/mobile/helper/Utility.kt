@@ -46,4 +46,9 @@ class Utility {
         fun hideStatusBar(window: Window) {
             window.setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.Layou
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+
+        /**
+         *

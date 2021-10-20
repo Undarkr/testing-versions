@@ -52,4 +52,6 @@ class Utility {
 
         /**
          * Set status bar color as you want by passing color id through argument
-        
+         *
+         * @param window    Window of activity
+         * @param context   cont

@@ -57,4 +57,5 @@ class Utility {
          * @param context   context of activity
          * @param color     Color id
          */
-        fun setSta
+        fun setStatusBarColor(window: Window, context: Context, @ColorRes color: Int) {
+     

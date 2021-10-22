@@ -58,4 +58,5 @@ class Utility {
          * @param color     Color id
          */
         fun setStatusBarColor(window: Window, context: Context, @ColorRes color: Int) {
-     
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+   

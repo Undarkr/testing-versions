@@ -64,4 +64,5 @@ class Utility {
         }
 
         /**
-         * Get available output direc
+         * Get available output directory from media directory
+         * Use file directory if media direc

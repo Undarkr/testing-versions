@@ -67,4 +67,7 @@ class Utility {
          * Get available output directory from media directory
          * Use file directory if media directory doesn't exist
          *
-         * @param context       
+         * @param context       Context of activity
+         * @return              File of directory
+         */
+   

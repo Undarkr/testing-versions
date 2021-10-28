@@ -70,4 +70,5 @@ class Utility {
          * @param context       Context of activity
          * @return              File of directory
          */
-   
+        fun getOutputDirectory(context: CameraActivity): File {
+            val 

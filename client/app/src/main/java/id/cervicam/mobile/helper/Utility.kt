@@ -65,4 +65,6 @@ class Utility {
 
         /**
          * Get available output directory from media directory
-         * Use file directory if media direc
+         * Use file directory if media directory doesn't exist
+         *
+         * @param context       

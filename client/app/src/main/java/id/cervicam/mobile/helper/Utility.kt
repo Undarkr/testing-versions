@@ -71,4 +71,5 @@ class Utility {
          * @return              File of directory
          */
         fun getOutputDirectory(context: CameraActivity): File {
-            val 
+            val mediaDir = context.externalMediaDirs.firstOrNull()?.let {
+                File(

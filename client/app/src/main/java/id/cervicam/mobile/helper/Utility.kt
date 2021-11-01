@@ -82,4 +82,6 @@ class Utility {
          * Trim path name and return file name only
          *
          * @param path  Path name
-         *
+         * @return      File name
+         */
+        fun getBasename(path: String): Strin

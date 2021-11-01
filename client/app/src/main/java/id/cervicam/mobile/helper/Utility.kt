@@ -75,4 +75,8 @@ class Utility {
                 File(it, context.getString(R.string.app_name)).apply { mkdirs() }
             }
 
-            return if (mediaDir != null && mediaDir.exists()) mediaDir else context.fil
+            return if (mediaDir != null && mediaDir.exists()) mediaDir else context.filesDir
+        }
+
+        /**
+         * Trim path name and retu

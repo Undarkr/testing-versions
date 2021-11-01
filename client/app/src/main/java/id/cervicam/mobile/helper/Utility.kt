@@ -79,4 +79,7 @@ class Utility {
         }
 
         /**
-         * Trim path name and retu
+         * Trim path name and return file name only
+         *
+         * @param path  Path name
+         *

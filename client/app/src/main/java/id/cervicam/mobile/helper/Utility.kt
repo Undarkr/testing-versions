@@ -84,4 +84,7 @@ class Utility {
          * @param path  Path name
          * @return      File name
          */
-        fun getBasename(path: String): Strin
+        fun getBasename(path: String): String {
+            return path.substring(path.lastIndexOf(File.separator) + 1)
+        }
+

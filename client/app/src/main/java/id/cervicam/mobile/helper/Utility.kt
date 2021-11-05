@@ -88,3 +88,5 @@ class Utility {
             return path.substring(path.lastIndexOf(File.separator) + 1)
         }
 
+        /**
+         * Get filename from URI that has "content://" on i

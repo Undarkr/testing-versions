@@ -89,4 +89,7 @@ class Utility {
         }
 
         /**
-         * Get filename from URI that has "content://" on i
+         * Get filename from URI that has "content://" on its path
+         *
+         * @param context   Context of activity
+         * @par

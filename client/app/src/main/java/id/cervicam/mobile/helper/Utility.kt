@@ -92,4 +92,6 @@ class Utility {
          * Get filename from URI that has "content://" on its path
          *
          * @param context   Context of activity
-         * @par
+         * @param uri       The targeted URI
+         */
+        private fun getFileName

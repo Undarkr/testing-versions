@@ -94,4 +94,5 @@ class Utility {
          * @param context   Context of activity
          * @param uri       The targeted URI
          */
-        private fun getFileName
+        private fun getFileNameFromUriContent(context: Context, uri: Uri): String {
+            var name

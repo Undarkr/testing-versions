@@ -95,4 +95,5 @@ class Utility {
          * @param uri       The targeted URI
          */
         private fun getFileNameFromUriContent(context: Context, uri: Uri): String {
-            var name
+            var name = ""
+            val returnCursor = context.contentResolver.qu

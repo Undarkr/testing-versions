@@ -98,3 +98,5 @@ class Utility {
             var name = ""
             val returnCursor = context.contentResolver.query(uri, null, null, null, null)
             if (returnCursor != null) {
+                val nameIndex = returnCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+    

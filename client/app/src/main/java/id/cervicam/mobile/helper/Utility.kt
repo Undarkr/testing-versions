@@ -96,4 +96,5 @@ class Utility {
          */
         private fun getFileNameFromUriContent(context: Context, uri: Uri): String {
             var name = ""
-            val returnCursor = context.contentResolver.qu
+            val returnCursor = context.contentResolver.query(uri, null, null, null, null)
+            if (returnCursor != null) {

@@ -100,4 +100,6 @@ class Utility {
             if (returnCursor != null) {
                 val nameIndex = returnCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
                 returnCursor.moveToFirst()
-                name = returnCursor.g
+                name = returnCursor.getString(nameIndex)
+                returnCursor.close()
+         

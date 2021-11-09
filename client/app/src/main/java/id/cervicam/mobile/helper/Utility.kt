@@ -108,4 +108,6 @@ class Utility {
         }
 
         /**
-         * Get file fr
+         * Get file from Uri instance if exist
+         *
+         * @param context   Context of activity

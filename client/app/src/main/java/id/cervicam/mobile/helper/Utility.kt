@@ -102,4 +102,10 @@ class Utility {
                 returnCursor.moveToFirst()
                 name = returnCursor.getString(nameIndex)
                 returnCursor.close()
-         
+            }
+
+            return name
+        }
+
+        /**
+         * Get file fr

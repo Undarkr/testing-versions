@@ -115,4 +115,5 @@ class Utility {
          * @return          Whether return file or not, depends on file exist or not from given uri
          */
         fun getFile(context: Context, uri: Uri): File? {
-            val parcelFileDescript
+            val parcelFileDescriptor = context.contentResolver.openFileDescriptor(uri, "r", null)
+            var file: File? = 

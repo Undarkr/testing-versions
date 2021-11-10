@@ -111,3 +111,5 @@ class Utility {
          * Get file from Uri instance if exist
          *
          * @param context   Context of activity
+         * @param uri       The Uri
+         * @return          Whether return file 

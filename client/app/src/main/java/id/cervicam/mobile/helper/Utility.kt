@@ -114,4 +114,5 @@ class Utility {
          * @param uri       The Uri
          * @return          Whether return file or not, depends on file exist or not from given uri
          */
-        fun ge
+        fun getFile(context: Context, uri: Uri): File? {
+            val parcelFileDescript

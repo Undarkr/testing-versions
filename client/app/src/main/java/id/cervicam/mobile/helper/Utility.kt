@@ -112,4 +112,6 @@ class Utility {
          *
          * @param context   Context of activity
          * @param uri       The Uri
-         * @return          Whether return file 
+         * @return          Whether return file or not, depends on file exist or not from given uri
+         */
+        fun ge

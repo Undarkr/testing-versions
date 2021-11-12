@@ -116,4 +116,6 @@ class Utility {
          */
         fun getFile(context: Context, uri: Uri): File? {
             val parcelFileDescriptor = context.contentResolver.openFileDescriptor(uri, "r", null)
-            var file: File? = 
+            var file: File? = null
+            parcelFileDescriptor?.let {
+                val inputSt

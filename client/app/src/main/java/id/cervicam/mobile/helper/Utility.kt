@@ -119,4 +119,5 @@ class Utility {
             var file: File? = null
             parcelFileDescriptor?.let {
                 val inputStream = FileInputStream(parcelFileDescriptor.fileDescriptor)
-                f
+                file = File(context.cacheDir, getFileNameFromUriContent(context, uri))
+       

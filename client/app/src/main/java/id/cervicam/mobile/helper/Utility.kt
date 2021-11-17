@@ -121,4 +121,9 @@ class Utility {
                 val inputStream = FileInputStream(parcelFileDescriptor.fileDescriptor)
                 file = File(context.cacheDir, getFileNameFromUriContent(context, uri))
                 val outputStream = FileOutputStream(file)
-                inputStream.cop
+                inputStream.copyTo(out = outputStream)
+            }
+            return file
+        }
+
+        /**

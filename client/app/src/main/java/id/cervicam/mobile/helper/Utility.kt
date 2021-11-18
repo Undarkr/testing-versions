@@ -130,4 +130,5 @@ class Utility {
          * Compress image with variant quality between 0 - 100 (worst - best)
          *
          * @param path          The path of image
-      
+         * @param quality       Quality of image (0 - 100)
+         * @param

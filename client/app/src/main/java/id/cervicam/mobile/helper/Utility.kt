@@ -127,3 +127,4 @@ class Utility {
         }
 
         /**
+         * Compress image with variant quality between 0 - 100 

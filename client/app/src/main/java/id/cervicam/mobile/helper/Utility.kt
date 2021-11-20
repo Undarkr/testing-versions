@@ -131,4 +131,5 @@ class Utility {
          *
          * @param path          The path of image
          * @param quality       Quality of image (0 - 100)
-         * @param
+         * @param extension     Bitmap compress format, default is JPEG
+         *

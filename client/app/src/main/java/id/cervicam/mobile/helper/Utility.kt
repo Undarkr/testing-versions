@@ -132,4 +132,7 @@ class Utility {
          * @param path          The path of image
          * @param quality       Quality of image (0 - 100)
          * @param extension     Bitmap compress format, default is JPEG
-         *
+         */
+        fun compressImage(
+            path: String,
+            qual

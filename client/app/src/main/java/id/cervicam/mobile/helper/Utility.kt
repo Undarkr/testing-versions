@@ -136,4 +136,7 @@ class Utility {
         fun compressImage(
             path: String,
             quality: Int,
-            extension: Bitmap.CompressFormat = Bitmap.CompressFor
+            extension: Bitmap.CompressFormat = Bitmap.CompressFormat.JPEG
+        ) {
+            val file = File(path)
+            if (

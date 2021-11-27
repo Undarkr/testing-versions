@@ -135,4 +135,5 @@ class Utility {
          */
         fun compressImage(
             path: String,
-            qual
+            quality: Int,
+            extension: Bitmap.CompressFormat = Bitmap.CompressFor

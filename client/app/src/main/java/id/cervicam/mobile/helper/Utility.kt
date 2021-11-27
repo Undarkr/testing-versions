@@ -139,4 +139,6 @@ class Utility {
             extension: Bitmap.CompressFormat = Bitmap.CompressFormat.JPEG
         ) {
             val file = File(path)
-            if (
+            if (!file.exists()) return
+
+            val exifOrientation = Exi

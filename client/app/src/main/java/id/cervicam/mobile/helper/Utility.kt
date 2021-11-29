@@ -144,4 +144,5 @@ class Utility {
             val exifOrientation = ExifInterface(path).getAttribute(ExifInterface.TAG_ORIENTATION)
             var outStream: OutputStream? = null
             try {
-                val imageBitma
+                val imageBitmap: Bitmap? = BitmapFactory.decodeFile(file.absolutePath)
+                out

@@ -141,4 +141,5 @@ class Utility {
             val file = File(path)
             if (!file.exists()) return
 
-            val exifOrientation = Exi
+            val exifOrientation = ExifInterface(path).getAttribute(ExifInterface.TAG_ORIENTATION)
+           

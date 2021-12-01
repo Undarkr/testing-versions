@@ -146,4 +146,6 @@ class Utility {
             try {
                 val imageBitmap: Bitmap? = BitmapFactory.decodeFile(file.absolutePath)
                 outStream = BufferedOutputStream(FileOutputStream(file))
-                image
+                imageBitmap?.compress(extension, quality, outStream)
+
+                val curre

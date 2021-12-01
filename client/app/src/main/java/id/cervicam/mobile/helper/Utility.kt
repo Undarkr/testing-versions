@@ -149,4 +149,5 @@ class Utility {
                 imageBitmap?.compress(extension, quality, outStream)
 
                 val currentExif = ExifInterface(path)
-                currentExif.setAttribute(ExifI
+                currentExif.setAttribute(ExifInterface.TAG_ORIENTATION, exifOrientation)
+                currentExif.sav

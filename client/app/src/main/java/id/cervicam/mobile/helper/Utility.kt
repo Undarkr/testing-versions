@@ -148,4 +148,5 @@ class Utility {
                 outStream = BufferedOutputStream(FileOutputStream(file))
                 imageBitmap?.compress(extension, quality, outStream)
 
-                val curre
+                val currentExif = ExifInterface(path)
+                currentExif.setAttribute(ExifI

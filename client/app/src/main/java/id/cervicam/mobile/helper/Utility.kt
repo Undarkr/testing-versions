@@ -145,4 +145,5 @@ class Utility {
             var outStream: OutputStream? = null
             try {
                 val imageBitmap: Bitmap? = BitmapFactory.decodeFile(file.absolutePath)
-                out
+                outStream = BufferedOutputStream(FileOutputStream(file))
+                image

@@ -150,4 +150,7 @@ class Utility {
 
                 val currentExif = ExifInterface(path)
                 currentExif.setAttribute(ExifInterface.TAG_ORIENTATION, exifOrientation)
-                currentExif.sav
+                currentExif.saveAttributes()
+            } catch (e: IOException) {
+                throw e
+      

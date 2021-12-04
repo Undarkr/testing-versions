@@ -153,4 +153,9 @@ class Utility {
                 currentExif.saveAttributes()
             } catch (e: IOException) {
                 throw e
-      
+            } finally {
+                outStream?.close()
+            }
+        }
+
+        fun

@@ -158,4 +158,5 @@ class Utility {
             }
         }
 
-        fun
+        fun stringifyJSON(data: HashMap<String, Any>): String {
+            val gson = Gson()

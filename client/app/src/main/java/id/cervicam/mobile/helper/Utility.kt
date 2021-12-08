@@ -160,3 +160,8 @@ class Utility {
 
         fun stringifyJSON(data: HashMap<String, Any>): String {
             val gson = Gson()
+            return gson.toJson(data).toString()
+        }
+
+        /**
+ 

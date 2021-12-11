@@ -164,4 +164,6 @@ class Utility {
         }
 
         /**
- 
+         * Parse JSON into generic object
+         *
+         * @param json  Ser

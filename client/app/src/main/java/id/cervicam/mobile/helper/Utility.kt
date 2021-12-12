@@ -166,4 +166,5 @@ class Utility {
         /**
          * Parse JSON into generic object
          *
-         * @param json  Ser
+         * @param json  Serialized JSON string
+         * @return      A list of key-value, represented by 

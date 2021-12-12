@@ -167,4 +167,7 @@ class Utility {
          * Parse JSON into generic object
          *
          * @param json  Serialized JSON string
-         * @return      A list of key-value, represented by 
+         * @return      A list of key-value, represented by HashMap
+         */
+        fun parseJSON(json: String?): HashMap<String, Any> {
+        

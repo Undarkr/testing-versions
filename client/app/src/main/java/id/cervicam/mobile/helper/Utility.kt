@@ -171,4 +171,5 @@ class Utility {
          */
         fun parseJSON(json: String?): HashMap<String, Any> {
             val `object` = JsonParser.parseString(json) as JsonObject
-        
+            val set: Set<Map.Entry<String, JsonElement>> =
+                `object`.entry

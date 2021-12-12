@@ -170,4 +170,5 @@ class Utility {
          * @return      A list of key-value, represented by HashMap
          */
         fun parseJSON(json: String?): HashMap<String, Any> {
+            val `object` = JsonParser.parseString(json) as JsonObject
         

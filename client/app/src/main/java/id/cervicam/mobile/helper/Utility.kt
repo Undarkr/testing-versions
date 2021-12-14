@@ -173,4 +173,7 @@ class Utility {
             val `object` = JsonParser.parseString(json) as JsonObject
             val set: Set<Map.Entry<String, JsonElement>> =
                 `object`.entrySet()
-            val iterator: Iterator<Map.Entry<String, JsonElement>> 
+            val iterator: Iterator<Map.Entry<String, JsonElement>> =
+                set.iterator()
+            val map = HashMap<String, Any>()
+      

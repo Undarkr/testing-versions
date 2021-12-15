@@ -177,4 +177,6 @@ class Utility {
                 set.iterator()
             val map = HashMap<String, Any>()
             while (iterator.hasNext()) {
-                val entry: Map.Entry
+                val entry: Map.Entry<String, JsonElement> =
+                    iterator.next()
+              

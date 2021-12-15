@@ -179,4 +179,5 @@ class Utility {
             while (iterator.hasNext()) {
                 val entry: Map.Entry<String, JsonElement> =
                     iterator.next()
-              
+                val key = entry.key
+                val value: JsonElement = entry.val

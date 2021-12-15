@@ -182,4 +182,5 @@ class Utility {
                 val key = entry.key
                 val value: JsonElement = entry.value
                 if (!value.isJsonPrimitive) {
-                    if (value.
+                    if (value.isJsonObject) {
+                        map[key] = parseJSON(value.toString

@@ -180,4 +180,6 @@ class Utility {
                 val entry: Map.Entry<String, JsonElement> =
                     iterator.next()
                 val key = entry.key
-                val value: JsonElement = entry.val
+                val value: JsonElement = entry.value
+                if (!value.isJsonPrimitive) {
+                    if (value.

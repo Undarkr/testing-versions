@@ -185,4 +185,4 @@ class Utility {
                     if (value.isJsonObject) {
                         map[key] = parseJSON(value.toString())
                     } else if (value.isJsonArray) {
-          
+                        val valueIsObject: Boolean = value.toString()

@@ -187,4 +187,5 @@ class Utility {
                     } else if (value.isJsonArray) {
                         val valueIsObject: Boolean = value.toString().contains(":")
 
-                        map[key] = if (valueIsObject)
+                        map[key] = if (valueIsObject) {
+                            val list: MutableList<HashMap<String, An

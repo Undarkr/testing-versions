@@ -188,4 +188,5 @@ class Utility {
                         val valueIsObject: Boolean = value.toString().contains(":")
 
                         map[key] = if (valueIsObject) {
-                            val list: MutableList<HashMap<String, An
+                            val list: MutableList<HashMap<String, Any>> = ArrayList()
+                            for (element in value.asJsonAr

@@ -191,4 +191,6 @@ class Utility {
                             val list: MutableList<HashMap<String, Any>> = ArrayList()
                             for (element in value.asJsonArray) {
                                 list.add(parseJSON(element.toString()))
-  
+                            }
+                            list
+             

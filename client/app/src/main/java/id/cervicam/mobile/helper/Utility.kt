@@ -189,4 +189,6 @@ class Utility {
 
                         map[key] = if (valueIsObject) {
                             val list: MutableList<HashMap<String, Any>> = ArrayList()
-                            for (element in value.asJsonAr
+                            for (element in value.asJsonArray) {
+                                list.add(parseJSON(element.toString()))
+  

@@ -193,4 +193,5 @@ class Utility {
                                 list.add(parseJSON(element.toString()))
                             }
                             list
-             
+                        } else {
+                            val list: MutableList<String> = 

@@ -194,4 +194,5 @@ class Utility {
                             }
                             list
                         } else {
-                            val list: MutableList<String> = 
+                            val list: MutableList<String> = ArrayList()
+                            for (element in value.asJsonAr

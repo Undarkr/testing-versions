@@ -195,4 +195,7 @@ class Utility {
                             list
                         } else {
                             val list: MutableList<String> = ArrayList()
-                            for (element in value.asJsonAr
+                            for (element in value.asJsonArray) {
+                                list.add(element.toString())
+                            }
+ 

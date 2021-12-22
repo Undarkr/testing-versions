@@ -198,4 +198,6 @@ class Utility {
                             for (element in value.asJsonArray) {
                                 list.add(element.toString())
                             }
- 
+                            list
+                        }
+              

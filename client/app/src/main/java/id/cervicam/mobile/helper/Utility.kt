@@ -200,4 +200,7 @@ class Utility {
                             }
                             list
                         }
-              
+                    }
+                } else {
+                    map[key] = value.asString
+          

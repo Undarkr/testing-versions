@@ -203,4 +203,10 @@ class Utility {
                     }
                 } else {
                     map[key] = value.asString
-          
+                }
+            }
+            return map
+        }
+
+        @Synchronized
+       

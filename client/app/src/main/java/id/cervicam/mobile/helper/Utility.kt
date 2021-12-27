@@ -209,4 +209,5 @@ class Utility {
         }
 
         @Synchronized
-       
+        fun getAppId(context: Context): String {
+            var i

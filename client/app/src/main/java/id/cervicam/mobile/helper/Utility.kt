@@ -212,4 +212,4 @@ class Utility {
         fun getAppId(context: Context): String {
             var id: String? = LocalStorage.get(context, LocalStorage.PreferenceKeys.ID.value)
 
- 
+            // If id doesn't exist then create new one and put the id into Sh

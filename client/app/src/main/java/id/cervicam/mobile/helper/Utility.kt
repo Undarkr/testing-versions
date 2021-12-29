@@ -210,4 +210,6 @@ class Utility {
 
         @Synchronized
         fun getAppId(context: Context): String {
-            var i
+            var id: String? = LocalStorage.get(context, LocalStorage.PreferenceKeys.ID.value)
+
+ 

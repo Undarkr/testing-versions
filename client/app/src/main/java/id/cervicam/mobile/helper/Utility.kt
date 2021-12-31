@@ -220,4 +220,5 @@ class Utility {
             return id
         }
 
-        private fun setToken(context: Context,
+        private fun setToken(context: Context, username: String, password: String): Boolean {
+            val wa

@@ -215,4 +215,9 @@ class Utility {
             // If id doesn't exist then create new one and put the id into SharedPreference for future use
             if (id == null) {
                 id = UUID.randomUUID().toString()
-                LocalStorage.set(co
+                LocalStorage.set(context, LocalStorage.PreferenceKeys.ID.value, id)
+            }
+            return id
+        }
+
+        private fun setToken(context: Context,

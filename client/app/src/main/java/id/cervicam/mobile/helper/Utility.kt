@@ -225,4 +225,6 @@ class Utility {
             var foundToken = false
             MainService.getToken(
                 context,
-              
+                username = username,
+                password = password,
+             

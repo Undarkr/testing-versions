@@ -227,4 +227,5 @@ class Utility {
                 context,
                 username = username,
                 password = password,
-             
+                callback = object : Callback {
+                    override fun onFail

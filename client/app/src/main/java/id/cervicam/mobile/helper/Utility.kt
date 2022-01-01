@@ -222,4 +222,7 @@ class Utility {
 
         private fun setToken(context: Context, username: String, password: String): Boolean {
             val waitUntilGetResponse = CountDownLatch(1)
-            var foundToken = fals
+            var foundToken = false
+            MainService.getToken(
+                context,
+              

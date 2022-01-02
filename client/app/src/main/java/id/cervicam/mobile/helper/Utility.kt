@@ -233,4 +233,5 @@ class Utility {
                         waitUntilGetResponse.countDown()
                     }
 
-                    override fun onResponse(call: Call, response
+                    override fun onResponse(call: Call, response: Response) {
+                        if (response.isSuccessful) {

@@ -228,4 +228,6 @@ class Utility {
                 username = username,
                 password = password,
                 callback = object : Callback {
-                    override fun onFail
+                    override fun onFailure(call: Call, e: IOException) {
+                        e.printStackTrace()
+       

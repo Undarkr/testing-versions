@@ -232,3 +232,5 @@ class Utility {
                         e.printStackTrace()
                         waitUntilGetResponse.countDown()
                     }
+
+                    override fun onResponse(call: Call, response

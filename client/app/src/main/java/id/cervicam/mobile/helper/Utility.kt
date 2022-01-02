@@ -230,4 +230,5 @@ class Utility {
                 callback = object : Callback {
                     override fun onFailure(call: Call, e: IOException) {
                         e.printStackTrace()
-       
+                        waitUntilGetResponse.countDown()
+                    }

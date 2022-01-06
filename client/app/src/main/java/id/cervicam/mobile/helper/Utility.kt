@@ -237,4 +237,5 @@ class Utility {
                         if (response.isSuccessful) {
                             if (response.code() == 200) {
                                 val body = parseJSON(response.body()?.string())
-                              
+                                foundToken = try {
+                                    (body["non_field_errors"

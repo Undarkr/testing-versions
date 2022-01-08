@@ -238,4 +238,6 @@ class Utility {
                             if (response.code() == 200) {
                                 val body = parseJSON(response.body()?.string())
                                 foundToken = try {
-                                    (body["non_field_errors"] as ArrayList<*>)[0].toString() != "\"Unable to log in with provided credentials
+                                    (body["non_field_errors"] as ArrayList<*>)[0].toString() != "\"Unable to log in with provided credentials.\""
+                                } catch (e: TypeCastException) {
+          

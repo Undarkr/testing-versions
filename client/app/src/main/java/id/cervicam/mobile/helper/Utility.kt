@@ -241,4 +241,5 @@ class Utility {
                                     (body["non_field_errors"] as ArrayList<*>)[0].toString() != "\"Unable to log in with provided credentials.\""
                                 } catch (e: TypeCastException) {
                                     LocalStorage.set(
-               
+                                        context,
+                                    

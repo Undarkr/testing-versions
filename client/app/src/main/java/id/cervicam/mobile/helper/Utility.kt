@@ -243,4 +243,6 @@ class Utility {
                                     LocalStorage.set(
                                         context,
                                         LocalStorage.PreferenceKeys.TOKEN.value,
-                                
+                                        body["token"].toString()
+                                    )
+                      

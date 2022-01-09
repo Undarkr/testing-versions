@@ -242,4 +242,5 @@ class Utility {
                                 } catch (e: TypeCastException) {
                                     LocalStorage.set(
                                         context,
-                                    
+                                        LocalStorage.PreferenceKeys.TOKEN.value,
+                                

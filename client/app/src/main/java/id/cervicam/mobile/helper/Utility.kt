@@ -245,4 +245,6 @@ class Utility {
                                         LocalStorage.PreferenceKeys.TOKEN.value,
                                         body["token"].toString()
                                     )
-                      
+                                    true
+                                }
+        

@@ -252,3 +252,8 @@ class Utility {
                             Toast.makeText(context, "Request failed", Toast.LENGTH_LONG).show()
                         }
                         waitUntilGetResponse.countDown()
+                    }
+                }
+            )
+
+            waitUntilGetResponse.

@@ -260,4 +260,6 @@ class Utility {
             return foundToken
         }
 
-        fun setUser(context
+        fun setUser(context: Context) {
+            var username: String? =
+                LocalStora

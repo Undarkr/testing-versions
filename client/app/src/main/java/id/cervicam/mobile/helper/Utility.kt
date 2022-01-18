@@ -256,4 +256,8 @@ class Utility {
                 }
             )
 
-            waitUntilGetResponse.
+            waitUntilGetResponse.await()
+            return foundToken
+        }
+
+        fun setUser(context

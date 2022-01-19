@@ -262,4 +262,5 @@ class Utility {
 
         fun setUser(context: Context) {
             var username: String? =
-                LocalStora
+                LocalStorage.get(context, LocalStorage.PreferenceKeys.USERNAME.value)
+            var

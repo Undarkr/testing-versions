@@ -267,4 +267,5 @@ class Utility {
                 LocalStorage.get(context, LocalStorage.PreferenceKeys.PASSWORD.value)
 
             var shouldCreateUser = true
-            if (usernam
+            if (username != null && password != null) {
+                shouldCreateUser = !setToken(context, 

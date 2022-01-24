@@ -264,4 +264,7 @@ class Utility {
             var username: String? =
                 LocalStorage.get(context, LocalStorage.PreferenceKeys.USERNAME.value)
             var password: String? =
-                LocalStorage.get(context, LocalStorage.PreferenceK
+                LocalStorage.get(context, LocalStorage.PreferenceKeys.PASSWORD.value)
+
+            var shouldCreateUser = true
+            if (usernam

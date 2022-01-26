@@ -268,4 +268,7 @@ class Utility {
 
             var shouldCreateUser = true
             if (username != null && password != null) {
-                shouldCreateUser = !setToken(context, 
+                shouldCreateUser = !setToken(context, username, password)
+            }
+
+            val creatingUserIfNece

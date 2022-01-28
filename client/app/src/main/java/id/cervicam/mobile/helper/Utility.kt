@@ -274,4 +274,5 @@ class Utility {
             val creatingUserIfNecessary = CountDownLatch(1)
 
             // If username or password is empty then create new one and put the credential into SharedPreferences
-          
+            if (shouldCreateUser) {
+                username = getAppId(context)

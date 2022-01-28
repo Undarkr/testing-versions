@@ -271,4 +271,6 @@ class Utility {
                 shouldCreateUser = !setToken(context, username, password)
             }
 
-            val creatingUserIfNece
+            val creatingUserIfNecessary = CountDownLatch(1)
+
+            // If username or password is em

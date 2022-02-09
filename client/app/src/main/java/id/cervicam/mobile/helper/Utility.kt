@@ -282,4 +282,5 @@ class Utility {
                     launch(Dispatchers.Default) {
                         MainService.createUser(
                             context,
-                            name = "${an
+                            name = "${android.os.Build.MODEL} [${username}]",
+                            username

@@ -283,4 +283,6 @@ class Utility {
                         MainService.createUser(
                             context,
                             name = "${android.os.Build.MODEL} [${username}]",
-                            username
+                            username = username,
+                            password = password,
+                   

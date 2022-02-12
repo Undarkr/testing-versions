@@ -286,4 +286,5 @@ class Utility {
                             username = username,
                             password = password,
                             callback = object : Callback {
-                             
+                                override fun onFailure(call: Call, e: IOException) {
+                         

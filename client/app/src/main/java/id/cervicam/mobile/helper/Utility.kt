@@ -291,4 +291,6 @@ class Utility {
                                     creatingUserIfNecessary.countDown()
                                 }
 
-                                override fun onResponse(call: Call, response: Respons
+                                override fun onResponse(call: Call, response: Response) {
+                                    if (response.isSuccessful) {
+    

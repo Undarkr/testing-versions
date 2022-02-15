@@ -294,4 +294,5 @@ class Utility {
                                 override fun onResponse(call: Call, response: Response) {
                                     if (response.isSuccessful) {
                                         if (response.code() == 201) {
-         
+                                            LocalStorage.set(
+                        

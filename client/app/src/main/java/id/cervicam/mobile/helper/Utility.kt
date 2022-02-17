@@ -296,4 +296,5 @@ class Utility {
                                         if (response.code() == 201) {
                                             LocalStorage.set(
                                                 context,
-                            
+                                                LocalStorage.PreferenceKeys.USERNAME.value,
+         

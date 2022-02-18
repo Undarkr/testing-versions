@@ -297,4 +297,5 @@ class Utility {
                                             LocalStorage.set(
                                                 context,
                                                 LocalStorage.PreferenceKeys.USERNAME.value,
-         
+                                                username
+                                

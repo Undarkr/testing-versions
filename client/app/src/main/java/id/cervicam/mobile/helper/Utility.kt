@@ -301,4 +301,4 @@ class Utility {
                                             )
                                             LocalStorage.set(
                                                 context,
-          
+                                                LocalStorage.PreferenceKeys.PASSWORD.value,

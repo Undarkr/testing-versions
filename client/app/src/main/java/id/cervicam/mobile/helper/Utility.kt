@@ -304,4 +304,6 @@ class Utility {
                                                 LocalStorage.PreferenceKeys.PASSWORD.value,
                                                 password
                                             )
-                          
+                                        }
+                                    } else {
+                    

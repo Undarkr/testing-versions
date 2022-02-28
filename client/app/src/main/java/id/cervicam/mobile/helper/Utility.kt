@@ -307,4 +307,5 @@ class Utility {
                                         }
                                     } else {
                                         Toast.makeText(context, "Request failed", Toast.LENGTH_LONG)
-       
+                                            .show()
+                                   

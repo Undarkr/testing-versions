@@ -316,4 +316,7 @@ class Utility {
                     }
                 }
             } else {
-                crea
+                creatingUserIfNecessary.countDown()
+            }
+
+            creatingUse

@@ -321,4 +321,4 @@ class Utility {
 
             creatingUserIfNecessary.await()
             val failToGetToken: Boolean =
-                us
+                username != null && password != null && !setToken(context, us

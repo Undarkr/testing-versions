@@ -319,4 +319,6 @@ class Utility {
                 creatingUserIfNecessary.countDown()
             }
 
-            creatingUse
+            creatingUserIfNecessary.await()
+            val failToGetToken: Boolean =
+                us

@@ -321,4 +321,7 @@ class Utility {
 
             creatingUserIfNecessary.await()
             val failToGetToken: Boolean =
-                username != null && password != null && !setToken(context, us
+                username != null && password != null && !setToken(context, username, password)
+
+            if (failToGetToken) {
+                Toast.makeTex

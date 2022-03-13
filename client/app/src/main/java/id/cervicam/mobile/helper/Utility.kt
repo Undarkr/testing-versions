@@ -324,4 +324,7 @@ class Utility {
                 username != null && password != null && !setToken(context, username, password)
 
             if (failToGetToken) {
-                Toast.makeTex
+                Toast.makeText(context, "Fail to set token", Toast.LENGTH_LONG).show()
+            }
+        }
+    

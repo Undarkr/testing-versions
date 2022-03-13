@@ -327,4 +327,5 @@ class Utility {
                 Toast.makeText(context, "Fail to set token", Toast.LENGTH_LONG).show()
             }
         }
-    
+    }
+}

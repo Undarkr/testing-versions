@@ -78,3 +78,84 @@ class MainService {
                             ),
                             "degree" to mapOf(
                                 "instance_name" to instanceName,
+                                "name" to degreeName
+                            ),
+                            "workplace" to mapOf(
+                                "country" to workplaceCountry,
+                                "province" to workplaceProvince,
+                                "city" to workplaceCity,
+                                "street_name" to workplaceStreetName,
+                                "postal_code" to workplacePostalCode
+                            )
+                        ) as HashMap<String, Any>
+                    )
+                )
+            )
+        }
+
+        fun getToken(context: Context, callback: Callback, username: String, password: String) {
+            sendRequest(
+                context,
+                callback = callback,
+                uri = getAPIUri("/api/v1/auth/token/"),
+                method = HttpMethod.POST,
+                body = RequestBody.create(
+                    MediaType.parse("application/json"),
+                    Utility.stringifyJSON(
+                        mapOf<String, Any>(
+                            "username" to username,
+                            "password" to password
+                        ) as HashMap<String, Any>
+                    )
+                )
+            )
+        }
+
+        fun classifyImage(context: Context, callback: Callback, image: File) {
+            return sendRequest(
+                context,
+                callback = callback,
+                uri = getAPIUri("/api/v1/cervic-model/classifications/"),
+                method = HttpMethod.POST,
+                body = MultipartBody.Builder().setType(MultipartBody.FORM)
+                    .addFormDataPart(
+                        "image",
+                        Utility.getBasename(image.path),
+                        RequestBody.create(
+                            MediaType.parse("application/octet-stream"),
+                            image
+                        )
+                    )
+                    .build(),
+                useAuth = true
+            )
+        }
+
+        fun getAllClassifications(
+            context: Context,
+            callback: Callback,
+            query: HashMap<String, String>?
+        ) {
+            var queryString = ""
+            if (query != null) {
+                queryString = "?"
+                for ((key, value) in query) {
+                    queryString += "${key}=${value}&"
+                }
+                queryString = queryString.substring(0, queryString.length - 1)
+            }
+            sendRequest(
+                context,
+                callback = callback,
+                uri = getAPIUri("/api/v1/cervic-model/classifications/${queryString}"),
+                method = HttpMethod.GET,
+                useAuth = true
+            )
+        }
+
+        fun getClassification(context: Context, callback: Callback, id: String) {
+            sendRequest(
+                context,
+                callback = callback,
+                uri = getAPIUri("/api/v1/cervic-model/classifications/${id}/"),
+                method = HttpMethod.GET,

@@ -159,3 +159,8 @@ class MainService {
                 callback = callback,
                 uri = getAPIUri("/api/v1/cervic-model/classifications/${id}/"),
                 method = HttpMethod.GET,
+                useAuth = true
+            )
+        }
+    }
+}

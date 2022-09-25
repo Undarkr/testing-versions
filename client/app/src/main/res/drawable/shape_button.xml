@@ -3,4 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="254dp"
     android:layout_height="40dp"
-    android:shape="rectangle"
+    android:shape="rectangle">
+
+    <solid
+        android:layout_width="match_parent"
+        android:layout_hei

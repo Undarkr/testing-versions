@@ -11,4 +11,6 @@
         android:bottomRightRadius="70dp"
         />
     <solid
-        android:co
+        android:color="#323232"
+        />
+</shape>

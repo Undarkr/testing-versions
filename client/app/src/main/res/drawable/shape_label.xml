@@ -6,4 +6,7 @@
     android:shape="rectangle">
     <solid
         android:layout_width="match_parent"
-        android:layout_height="match_par
+        android:layout_height="match_parent"
+        android:color="@color/colorPrimary"
+        />
+    <corn

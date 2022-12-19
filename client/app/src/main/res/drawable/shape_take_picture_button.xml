@@ -8,4 +8,8 @@
     <corners
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:ra
+        android:radius="1000dp"
+        />
+    <solid
+        android:color="#ffffff"
+   

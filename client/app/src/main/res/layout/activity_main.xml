@@ -10,4 +10,6 @@
     app:justifyContent="flex_start"
     app:alignItems="flex_start"
     app:flexDirection="column">
-    <com.google.android.mate
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+     

@@ -8,4 +8,6 @@
     android:layout_height="match_parent"
     app:flexWrap="nowrap"
     app:justifyContent="flex_start"
-    app:alignItems="f
+    app:alignItems="flex_start"
+    app:flexDirection="column">
+    <com.google.android.mate

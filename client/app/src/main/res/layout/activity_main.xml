@@ -29,4 +29,6 @@
     <com.google.android.flexbox.FlexboxLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_flexGr
+        app:layout_flexGrow="1">
+        <ScrollView
+            android:id="@+id/scroll

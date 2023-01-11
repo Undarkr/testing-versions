@@ -31,4 +31,6 @@
         android:layout_height="wrap_content"
         app:layout_flexGrow="1">
         <ScrollView
-            android:id="@+id/scroll
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layou

@@ -39,4 +39,6 @@
                 android:id="@+id/refresher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <L
+                <ListView
+                    android:id="@+id/resultListView"
+                    android:layout_widt

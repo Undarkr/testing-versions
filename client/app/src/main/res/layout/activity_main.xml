@@ -36,4 +36,6 @@
             android:layout_height="match_parent"
             android:fillViewport="true">
             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                android:id="@+i
+                android:id="@+id/refresher"
+                android:layout_width="match_parent"
+  

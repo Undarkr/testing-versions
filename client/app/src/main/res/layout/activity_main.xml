@@ -53,4 +53,6 @@
         android:layout_height="wrap_content"
         app:layout_flexGrow="0"
         app:justifyContent="center"
-     
+        app:alignItems="flex_end"
+        android:paddingHorizontal="16dp"
+ 

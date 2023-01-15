@@ -55,4 +55,6 @@
         app:justifyContent="center"
         app:alignItems="flex_end"
         android:paddingHorizontal="16dp"
- 
+        app:flexDirection="column"
+        tools:ignore="RtlSymmetry">
+        

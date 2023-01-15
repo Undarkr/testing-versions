@@ -57,4 +57,6 @@
         android:paddingHorizontal="16dp"
         app:flexDirection="column"
         tools:ignore="RtlSymmetry">
-        
+        <FrameLayout
+            android:id="@+id/openCameraButton"
+            android:la

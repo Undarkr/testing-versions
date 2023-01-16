@@ -59,4 +59,6 @@
         tools:ignore="RtlSymmetry">
         <FrameLayout
             android:id="@+id/openCameraButton"
-            android:la
+            android:layout_marginVertical="20dp"
+            android:layout_width="wrap_content"
+   

@@ -62,4 +62,5 @@
             android:layout_marginVertical="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </com.google.android.flex
+    </com.google.android.flexbox.FlexboxLayout>
+</com.google.android.flexbox.FlexboxLayout>

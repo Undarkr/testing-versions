@@ -16,4 +16,5 @@
         android:paddingVertical="4dp"
         android:shadowColor="#FFFFFF"
         android:text=""
- 
+        android:textColor="@color/colorWhite"
+        tools:ignore="MissingConstrai

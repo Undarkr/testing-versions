@@ -17,4 +17,5 @@
         android:shadowColor="#FFFFFF"
         android:text=""
         android:textColor="@color/colorWhite"
-        tools:ignore="MissingConstrai
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

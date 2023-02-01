@@ -2,4 +2,6 @@
     <string name="app_name">Cervicam</string>
     <string name="action_settings">Settings</string>
     <string name="activity_main_opencamera">Membuka Kamera</string>
-    <string name="activity_imagepreview_previous">Ul
+    <string name="activity_imagepreview_previous">Ulangi</string>
+    <string name="activity_imagepreview_next">Lanjut</string>
+    

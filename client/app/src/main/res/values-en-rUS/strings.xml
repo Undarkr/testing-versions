@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Cervicam</string>
     <string name="action_settings">Settings</string>
-    <string
+    <string name="activity_main_opencamera">Open Camera</string>
+    <str

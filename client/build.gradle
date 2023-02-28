@@ -15,4 +15,11 @@ buildscript {
 }
 
 allprojects {
-    reposito
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete 

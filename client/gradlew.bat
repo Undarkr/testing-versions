@@ -51,4 +51,9 @@ goto fail
 if not "%OS%" == "Windows_NT" goto win9xME_args
 
 :win9xME_args
-@rem Slurp the comman
+@rem Slurp the command line arguments.
+set CMD_LINE_ARGS=
+set _SKIP=2
+
+:win9xME_args_slurp
+if "x%~1" == "x" 
